@@ -1,0 +1,15 @@
+<h1>Contacts</h1>
+
+<ul>
+  <% @contacts.each do |contact| %>
+
+    <a href='<%="contacts/#{contact.id}"%>' ><li><%= contact.name %> - <%= contact.phone_number %></li></a>
+  <% end %>
+</ul>
+
+<div class="search">
+  <form class="search" action="/search" method="post">
+    <input type="text" name="search" value=""></input>
+    <button type="submit" name="button">search</button>
+  </form>
+</div>

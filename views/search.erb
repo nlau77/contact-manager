@@ -1,0 +1,19 @@
+<h3>You have entered a search query for: <%= @search %> </h3>
+
+<h6>First names</h6>
+<% @articles_first_name.each do |article| %>
+  <%= article.first_name %> <%=article.last_name %> - <%= article.phone_number %>
+<% end %>
+
+<h6>Last Names</h6>
+<% @articles_last_name.each do |article| %>
+  <%= article.first_name %> <%=article.last_name %> - <%= article.phone_number %>
+<% end %>
+
+<h6>Phone Numbers</h6>
+  <ul>
+    <% @articles_phone_number.each do |article| %>
+      <li><%= article.first_name %> <%=article.last_name %>- <%= article.phone_number %></li>
+    <% end %>
+  </ul>
+<h6><a href='/'>Back</a></h6>
